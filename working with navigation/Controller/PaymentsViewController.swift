@@ -170,6 +170,7 @@ class PaymentsViewController: UIViewController {
         self.alert.dismiss(animated: true, completion: nil)
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let tabBar = storyboard.instantiateViewController(withIdentifier: "TabBarController")
+        (UIApplication.shared.connectedScenes.first?.delegate as? SceneDelegate)?.window?.rootViewController = tabBar
 //        let appDelegate = UIScene.
 //        appDelegate?.window??.rootViewController = tabBar
     }
